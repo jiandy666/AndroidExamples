@@ -1,0 +1,25 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
+rootProject.name = "AndroidExamples"
+
+
+include ':Binder.Common', ':Binder.JavaClient', ':Binder.JavaService', ':Binder.NdkService'
+project(':Binder.Common').projectDir = file('./binder/Common')
+project(':Binder.JavaClient').projectDir = file('./binder/JavaBinderClient')
+project(':Binder.JavaService').projectDir = file('./binder/JavaBinderService')
+project(':Binder.NdkService').projectDir = file('./binder/NdkBinderService')
+
+
+include ':Crash.Breakpad', ':Crash.Crasher'
+project(':Crash.Breakpad').projectDir = file('./crash/breakpad')
+project(':Crash.Crasher').projectDir = file('./crash/crasher')
+
+
