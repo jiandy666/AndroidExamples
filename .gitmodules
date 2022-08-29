@@ -2,5 +2,5 @@
 	path = crash/breakpad/src/main/cpp/external/breakpad
 	url = https://github.com/google/breakpad.git
 [submodule "crash/breakpad/src/main/cpp/external/breakpad-client/src/third_party/lss"]
-	path = crash/breakpad/src/main/cpp/external/breakpad-client/src/third_party/lss
+	path = crash/breakpad/src/main/cpp/external/include/third_party/lss
 	url = https://github.com/linux-on-ibm-z/linux-syscall-support.git

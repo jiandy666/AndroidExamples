@@ -1,13 +1,13 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.4.1)
 
 
+set(EXT_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 set(ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../breakpad)
-
 
 include_directories(
         ${ROOT}/src
         ${ROOT}/src/common/android/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        ${EXT_INCLUDE}
 )
 
 

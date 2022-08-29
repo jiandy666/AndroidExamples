@@ -4,7 +4,12 @@ project(androidz-breakpad)
 
 # breakpad client
 set(BREAKPAD_ROOT external/breakpad)
-include_directories(${BREAKPAD_ROOT}/src ${BREAKPAD_ROOT}/src/common/include)
+set(EXT_INCLUDE   external/include)
+include_directories(
+        ${BREAKPAD_ROOT}/src
+        ${BREAKPAD_ROOT}/src/common/include
+        ${EXT_INCLUDE}
+)
 add_subdirectory(external/breakpad-client)
 list(APPEND LINK_LIBRARIES breakpad-client)
 
