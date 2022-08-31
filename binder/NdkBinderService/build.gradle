@@ -15,9 +15,9 @@ android {
 
         externalNativeBuild {
             cmake {
-                cppFlags '-std=c++11'
+                cppFlags '-std=c++17'
                 arguments "-Daidl_src_dir=${[project(':Binder.Common').projectDir.absolutePath, 'src', 'main', 'cpp', 'aidl'].join(File.separator).replace('\\', '/')}",
-                          "-Dcommon_inc_idr=${[project(':Binder.Common').projectDir.absolutePath, 'src', 'main', 'cpp', 'includes'].join(File.separator).replace('\\', '/')}"
+                          "-Dcommon_inc_dir=${[project(':Binder.Common').projectDir.absolutePath, 'src', 'main', 'cpp', 'includes'].join(File.separator).replace('\\', '/')}"
             }
         }
     }
