@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 	@Override
-	protected void onPause() {
+	protected void onStop() {
 		mJavaServiceConnection.unbind();
 		mNativeServiceConnection.unbind();
 
-		super.onPause();
+		super.onStop();
 	}
 
 
@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
 			message(msgPrefix + "Waiting to talk to IMyService...");
 
 			final IMyService service = connection.getService();
+			if (service == null) {
+				message(msgPrefix + "IMyService is null");
+				return;
+			}
 
 			try {
 				Log.d(Constants.TAG, "[App] [java] IMyInterface.basicTypes");
